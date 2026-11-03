@@ -13,6 +13,15 @@ navbar:
     - text: "GitHub"
       icon: fa-github
       href: https://github.com/hsaid93
+    - text: "Email"
+      icon: fa-envelope
+      href: mailto:hs3653@cumc.columbia.edu
+    - text: "Publications"
+      icon: fa-book
+      href: https://www.ncbi.nlm.nih.gov/myncbi/hyder.said.1/bibliography/public/
+    - text: "ORCID"
+      href: https://orcid.org/0000-0002-9022-9487
+      
 output:
   html_document:
     theme: cosmo

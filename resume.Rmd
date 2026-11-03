@@ -1,0 +1,79 @@
+---
+title: "Academic and Professional Experience"
+---
+
+## Clinical Training
+
+### Icahn School of Medicine at Mount Sinai 
+
+New York, NY
+
+- Advanced Fellowship in Inflammatory Bowel Disease, 2026-Present.
+- Gastroenterology Fellowship, 2023-2026.
+- Chief Gastroenterology Fellow, 2025-2026.
+
+### Beth Israel Deaconess Medical Center, Harvard Medical School
+
+Boston, MA
+
+- Internal Medicine Residency, 2020–2023
+- Clinical Fellow of Medicine, 2020-2023
+
+## Education
+
+### Columbia University Mailman School of Public Health
+
+New York, NY
+
+- Master of Science in Clinical Research (2025-Present)
+
+### University of California, Irvine School of Medicine
+
+Irvine, CA
+
+- Doctor of Medicine, with Distinction in Research and Service (2016-2020)
+
+### University of California, Los Angeles
+
+Los Angeles, CA
+
+- Bachelor's degree in Biology, summa cum laude (2012-2016)
+
+
+## Research Experience
+My research examines sleep, circadian rhythms, and gut-brain interactions in inflammatory bowel disease (IBD). I use patient-reported outcomes, wearable technology, clinical datasets, and prospective trials to identify modifiable contributors to symptom burden and treatment response.
+
+Current projects evaluate medication administration timing, morning light therapy, and behavioral interventions to improve treatment response, sleep, and fatigue in IBD. These studies combine patient-reported outcomes with wearable measures of sleep and circadian rhythms.
+
+## Selected Awards and Research Support
+
+- Gerald and Ruth Crohn Dickler Scholar Award, 2025-Present
+- American College of Gastroenterology Clinical Research Pilot Award, 2026-Present 
+- Crohn's and Colitis Foundation Student Research Award, 2017
+- UC Irvine Dean’s Summer Research Grant, 2017
+- American Gastroenterologic Association Student Research Fellowship Award, 2013
+- Southern California Institute Summer Research Award, 2010-2012
+
+## Publications
+
+### Peer Reviewed Publications
+My publications are available through my [NCBI bibliography](https://www.ncbi.nlm.nih.gov/myncbi/hyder.said.1/bibliography/public/). My researcher identifier is [ORCID 0000-0002-9022-9487](https://orcid.org/0000-0002-9022-9487).
+
+### Manuscripts Under Review
+1. Cutrona M, Said H, Zhang A, Wong SY, Cices A. Hidradenitis Suppurativa and Cutaneous Crohn’s
+Disease: A Narrative Review of Differentiation, Diagnosis, and Management. J Am Acad Dermatol. 2026
+Sep. Submitted.
+2. Estevinho MM, Said H, Nandy A, Snapper SB, Colombel JF, Agrawal M. Epstein-Barr virus and
+inflammatory bowel disease: a systematic review. Inflamm Bowel Dis. 2026 Sep. Submitted.
+3. Said H, Westvold S, Salwen-Deremer JK. Sleep Diary-Actigraphy Discordance in Crohn's Disease:
+Associations with Fatigue and Improvement Following Cognitive Behavioral Therapy for Insomnia. Sci.
+Rep. 2026 Aug. Submitted.
+4. de Amorrortu C, Ungaro R, Said H, Wernick R, Krek A, The CATHARSIS Research Group, Lewis A.
+Impact of Payer Barriers to Biologic Initiation. Inflamm Bowel Dis. 2026 July. Submitted.
+5. Ibing S, Odeyemi IA, Said H, Baum K, Colombel JF, Hirten RP, Ungaro RC, Renard BY.Treatment Timing
+as a Predictor of Therapeutic Response: Scalable Evidence from Electronic Health Records. JMIR Med
+Inform. 2026 July. Submitted.
+6. Johnson AM, Ramesh PR, Said H, et al. Baseline predictors and clinical outcomes of risankizumab dose
+optimization: a real-world multicenter retrospective study. Eur J Gastroenterol Hepatol. 2026 July.
+Submitted.
+
