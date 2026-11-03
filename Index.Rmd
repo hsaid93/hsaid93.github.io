@@ -1,0 +1,13 @@
+---
+title: "Hyder Said, MD"
+output: html_document
+---
+
+## Welcome
+My name is Hyder Said, and I am a gastroenterologist and advanced inflammatory bowel disease (IBD) fellow at the Icahn School of Medicine at Mount Sinai. I am also pursuing a Master of Science in Clinical Research at Columbia University Mailman School of Public Health. My research focuses on sleep, circadian rhythms, and gut-brain interactions in IBD. I study how wearable technology, behavioral interventions, and medication timing can improve symptoms, quality of life, and treatment outcomes.
+
+## Explore
+
+Learn more about my academic and professional background on my [resume](resume.html), or explore my [interactive dashboard](dashboard.html), developed for Data Science I Course. 
+
+You can also find my coding projects on [GitHub](https://github.com/hsaid93).
