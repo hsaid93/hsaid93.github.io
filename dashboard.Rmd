@@ -1,0 +1,161 @@
+---
+title: "Instacart Shopping Patterns"
+author: "Hyder Said"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: scroll
+    navbar:
+      - title: "Home"
+        href: index.html
+        align: right
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  fig.height = 5
+)
+
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("instacart", package = "p8105.datasets")
+
+# Count product purchases within each department.
+department_summary =
+  instacart |>
+  count(department, name = "product_count") |>
+  slice_max(product_count, n = 10, with_ties = FALSE) |>
+  mutate(
+    department = fct_reorder(department, product_count)
+  )
+
+# Create one row per order to avoid double counting.
+order_summary =
+  instacart |>
+  group_by(order_id, order_dow, order_hour_of_day) |>
+  summarise(
+    basket_size = n(),
+    .groups = "drop"
+  )
+
+# Count distinct orders by hour of day.
+hourly_summary =
+  order_summary |>
+  count(order_hour_of_day, name = "order_count") |>
+  arrange(order_hour_of_day)
+
+# Randomly select 10,000 orders to reduce the box plot's loading time.
+set.seed(3653)
+
+basket_sample =
+  order_summary |>
+  slice_sample(n = 10000) |>
+  mutate(
+    order_day = factor(order_dow, levels = 0:6)
+  )
+```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Top 10 Departments by Product Purchases
+
+```{r department-bar, fig.height=7}
+department_summary |>
+  plot_ly(
+    x = ~product_count,
+    y = ~department,
+    type = "bar",
+    orientation = "h",
+    marker = list(color = "#287D8E"),
+    hovertemplate =
+      "%{y}<br>Product purchases: %{x:,}<extra></extra>"
+  ) |>
+  layout(
+    xaxis = list(
+      title = "Number of product purchases",
+      tickformat = ",",
+      automargin = TRUE
+    ),
+    yaxis = list(
+      title = "",
+      automargin = TRUE
+    ),
+    margin = list(l = 140, r = 25, b = 80, t = 30),
+    showlegend = FALSE
+  )
+```
+
+### About These Plots
+
+**Product purchases:** The bar chart shows the ten departments with the most product purchases. Multiple products from the same order are counted separately. Produce has the most purchases, followed by dairy and eggs. Hover over each bar to see the total.
+
+**Order timing:** The line plot shows the number of orders placed at each hour of the day. Each order is counted once, regardless of how many products it contains. Ordering activity is lowest overnight and highest from late morning through the afternoon.
+
+**Basket size:** The box plots show the number of products per order by day of the week, using a random sample of 10,000 orders. Days are coded from 0 to 6 in the dataset. Median basket sizes are similar across days, with substantial variation within each day. Outlier points are hidden to make the plot easier to read, but those orders are included in the calculations.
+
+**Data source:** These plots use the Instacart dataset from the `p8105.datasets` package. The bar and line charts summarize the full dataset. The box plots use a random sample selected with a fixed seed so the results are reproducible.
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Orders by Hour of Day
+
+```{r hourly-line}
+hourly_summary |>
+  plot_ly(
+    x = ~order_hour_of_day,
+    y = ~order_count,
+    type = "scatter",
+    mode = "lines+markers",
+    line = list(color = "#287D8E"),
+    marker = list(color = "#287D8E"),
+    hovertemplate =
+      "Hour: %{x}<br>Orders: %{y:,}<extra></extra>"
+  ) |>
+  layout(
+    xaxis = list(
+      title = "Hour of day",
+      tickvals = seq(0, 23, by = 3),
+      automargin = TRUE
+    ),
+    yaxis = list(
+      title = "Number of orders",
+      tickformat = ",",
+      automargin = TRUE
+    ),
+    margin = list(l = 85, r = 25, b = 80, t = 30),
+    showlegend = FALSE
+  )
+```
+
+### Basket Size by Day of Week
+
+```{r basket-box}
+basket_sample |>
+  plot_ly(
+    x = ~order_day,
+    y = ~basket_size,
+    type = "box",
+    boxpoints = FALSE,
+    marker = list(color = "#287D8E"),
+    line = list(color = "#287D8E")
+  ) |>
+  layout(
+    xaxis = list(
+      title = "Day of week (dataset code)",
+      automargin = TRUE
+    ),
+    yaxis = list(
+      title = "Products per order",
+      rangemode = "tozero",
+      automargin = TRUE
+    ),
+    margin = list(l = 85, r = 25, b = 80, t = 30),
+    showlegend = FALSE
+  )
+```
