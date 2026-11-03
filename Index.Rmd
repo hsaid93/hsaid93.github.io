@@ -1,6 +1,5 @@
 ---
 title: "Hyder Said, MD"
-output: html_document
 ---
 
 ## Welcome
