@@ -10,3 +10,7 @@ My name is Hyder Said, and I am a gastroenterologist and advanced inflammatory b
 Learn more about my academic and professional background on my [resume](resume.html), or explore my [interactive dashboard](dashboard.html), developed for Data Science I Course. 
 
 You can also find my coding projects on [GitHub](https://github.com/hsaid93).
+
+## Contact
+
+You can reach me at [hs3653@cumc.columbia.edu](mailto:hs3653@cumc.columbia.edu).
